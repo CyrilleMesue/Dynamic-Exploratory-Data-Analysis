@@ -123,7 +123,7 @@ else:
     st.caption("**Display Data Info**")
     container2 = st.container()
     part2col1, part2col2 = container2.columns([8,4])
-    part2col1.write(summary_df.style.hide_index().to_html(), unsafe_allow_html=True)
+    part2col1.write(summary_df)
     part2col2.info("""**Questions?**""") 
     part2col2.info("""
     1. How many missing values are there in each column?
