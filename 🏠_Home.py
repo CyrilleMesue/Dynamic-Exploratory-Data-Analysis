@@ -81,7 +81,6 @@ if "raw_data" not in st.session_state:
 else:
     # load data
     data = st.session_state["raw_data"].copy()
-    st.write(st.session_state["raw_data"])
     # display data
     st.caption("**Dsiplay Dataset**")
     container1 = st.container()
