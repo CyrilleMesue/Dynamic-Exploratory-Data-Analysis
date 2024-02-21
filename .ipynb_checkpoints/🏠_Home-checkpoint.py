@@ -14,10 +14,10 @@ st.markdown(
     """
     <style>
     [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-        width: 260px;
+        width: 360px;
     }
     [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-        width: 260px;
+        width: 360px;
         margin-left: -500px;
     }
     </style>
@@ -49,7 +49,7 @@ part0col1, part0col2 = st.columns([8,4])
 part0col1.markdown("### Upload Data and Run EDA")  
 
 # Option 1 : Load data from a file in either csv, smi or text format
-uploaded_file = part0col1.file_uploader("Please upload data in csv, or tsv format", accept_multiple_files=False, type = ['csv','tsv'])
+uploaded_file = part0col1.file_uploader("Please upload data in csv format", accept_multiple_files=False, type = ['csv'])
 
 load_data = part0col1.button("Run EDA", key = 1)
 load_sample_data = part0col1.button("Run Sample Test", key = 2)
