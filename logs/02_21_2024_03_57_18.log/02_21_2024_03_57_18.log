@@ -1,2 +1,0 @@
-[ 2024-02-21 03:57:18,067 ] 105 root - INFO - Obtaining preprocessing object
-[ 2024-02-21 03:57:18,067 ] 111 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
