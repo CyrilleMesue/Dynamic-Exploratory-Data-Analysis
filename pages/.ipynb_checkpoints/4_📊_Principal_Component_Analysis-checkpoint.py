@@ -21,33 +21,6 @@ import os, sys
 ####################################################################################################
 st.set_page_config(layout="wide")
 st.title(':sparkles: Dynamic Exploratory Data Analysis!')
-
-# set sidebar width
-st.markdown(
-    """
-    <style>
-    [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-        width: 360px;
-    }
-    [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-        width: 360px;
-        margin-left: -500px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-
-)
-
-# fix margins
-st.markdown("""
-    <style>
-        .main > div {
-            padding-left: 3rem;
-            padding-right: 3rem;
-        }
-    </style>
-""", unsafe_allow_html=True)
 ####################################################################################################
 # End
 ####################################################################################################
