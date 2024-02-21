@@ -52,6 +52,7 @@ part0col1.markdown("### Upload Data and Run EDA")
 uploaded_file = part0col1.file_uploader("Please upload data in csv, or tsv format", accept_multiple_files=False, type = ['csv','tsv'])
 
 load_data = part0col1.button("Run EDA", key = 1)
+load_sample_data = part0col1.button("Run Sample Test", key = 2)
 
 if load_data:
     if uploaded_file == None:
@@ -64,6 +65,16 @@ if load_data:
         st.session_state["raw_data"] = uploaded_data
         # tell the user that file has been loaded successfully
         part0col1.success("File content has been successfully accessed!!!")
+
+# run on sample dataset
+if load_sample_data:
+    # read uploaded file
+    file_path = "https://raw.githubusercontent.com/CyrilleMesue/Heart-Failure-Prediction/main/heart.csv"
+    uploaded_data = pd.read_csv(file_path,header=0,encoding='utf-8')
+    
+    st.session_state["raw_data"] = uploaded_data
+    # tell the user that file has been loaded successfully
+    part0col1.success("Sample file content has been successfully accessed!!!")
 
 if "raw_data" not in st.session_state:
     st.warning("Warning! No file uploaded. Please upload a file and **Run EDA**!")
