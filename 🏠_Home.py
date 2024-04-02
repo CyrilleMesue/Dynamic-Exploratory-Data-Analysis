@@ -68,7 +68,6 @@ else:
     st.caption("**Dsiplay Dataset**")
     container1 = st.container()
     part1col1, part1col2 = container1.columns([8,4])
-    part1col1.write(data)
     part1col1.dataframe(data)
     part1col2.info("""
     **INFO:** 
